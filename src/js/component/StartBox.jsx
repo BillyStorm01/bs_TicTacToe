@@ -1,4 +1,5 @@
 import React from "react";
+import '/src/styles/component-css/start-box.css'
 
 const StartBox = ({startGame, setPlayer}) => {
       const playGame = (piece) => {
@@ -6,18 +7,18 @@ const StartBox = ({startGame, setPlayer}) => {
         setPlayer(piece)
       }
     return (
-<div className="container startBox p-3 mx-auto mt-5">
-        <h4 className="mt-4 text-center"><strong>CHOOSE YOUR WEAPON</strong></h4>
-        <div className="inputs text-center">
+<div className="main-menu__startBox">
+        <h4><strong>CHOOSE YOUR WEAPON</strong></h4>
+        <div className="inputs">
         <input placeholder="Player 1 username"></input>
         <input placeholder="Player 2 username"></input>
         </div>
-    <div className="d-flex justify-content-center">
-        <button className="xBox mx-1 my-3 px-3" type="button" onClick={() => playGame('X')}>
-        <h1 className="mb-0 text-center" style={{color: '#E2B654'}}>X</h1>
+    <div>
+        <button className="xBox" type="button" onClick={() => playGame('X')}>
+        <h1 style={{color: '#E2B654'}}>X</h1>
         </button>
-        <button className="oBox mx-1 my-3 px-3" type="button" onClick={() => playGame('O')}>
-        <h1 className="mb-0 text-center" style={{color: '#3FACD6'}}>O</h1>
+        <button className="oBox" type="button" onClick={() => playGame('O')}>
+        <h1 style={{color: '#3FACD6'}}>O</h1>
         </button>
     </div>
 </div>
